@@ -14,16 +14,33 @@ html {
 
 .container {
 	position: relative;
-	width: 88%;
+	width: 75%;
 	margin: 0 auto;
 	height: 100vh;
 }
 
-.wrapper {
-	height: 100vh;
+.stripes-background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
 }
 
-.background-stripes {
+.stripe {
+    background-color: #151515;
+    /* width: 100%; */
+    min-width: 85px;
+    width: calc((75vw / 12) - (10px));
+    height: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+/* .background-stripes {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -38,6 +55,12 @@ html {
 
 .stripe:last-child {
 	margin-right: 0;
+} */
+
+
+.enter-wrapper {
+    height: 600px;
+    margin-bottom: 141px;
 }
 
 .enter {
@@ -115,4 +138,16 @@ html {
 .link-container:hover::before {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.games-wrapper {
+    z-index: 100;
+}
+
+.block {
+    z-index: 100;
+}
+
+img {
+    z-index: 10;
 }
