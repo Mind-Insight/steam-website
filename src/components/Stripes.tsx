@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 function Stripes() {
-	const [stripesCount, setStripesCount] = useState(
-		Math.floor(window.innerWidth / 115)
-	);
+	const [stripesCount, setStripesCount] = useState(getStripesCount());
+
+	function getStripesCount() {
+		return Math.floor(window.innerWidth / 113);
+	}
 
 	const updateStripesCount = () => {
-		setStripesCount(Math.floor(window.innerWidth / 85));
+		setStripesCount(getStripesCount());
 	};
 
 	useEffect(() => {
