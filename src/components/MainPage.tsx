@@ -1,11 +1,14 @@
 import Stripes from "./Stripes";
 import SocialLinks from "./Social"
 import GameBlock from "./GameBlock";
+import WishList from "./WishList";
+import News from "./News"
 import logo from "../assets/logo.svg";
+import Footer from "./Footer";
 
 function Main() {
 	return (
-		<div className="container">
+		<div className="container" id="start">
             <div className="enter-wrapper">
                 <div className="enter">
                     <div className="logo-container">
@@ -29,7 +32,18 @@ function Main() {
                     <GameBlock/>
                     <GameBlock/>
                     <GameBlock/>
+                    {/* <GameBlock/> */}
                 </div>
+            </div>
+            {/* <div className="wish-list-wrapper">
+                <WishList/>
+            </div> */}
+            <div className="news-wrapper">
+                <News/>
+            </div>
+            
+            <div className="footer-wrapper">
+                <Footer/>
             </div>
 		</div>
 	);

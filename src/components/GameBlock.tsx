@@ -24,7 +24,7 @@ function GameBlock() {
 				</div>
 				<a href="#" className="get-on-steam-btn">
                     <div className="steam-btn-container">
-                        <img src={steam} alt="" />
+                        <img src={steam} alt=""></img>
                         <span>GET ON STEAM</span>
                     </div>
                 </a>
