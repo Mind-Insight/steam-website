@@ -2,6 +2,12 @@
 * {
 	padding: 0;
 	margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+    font-style: none;
+    text-decoration: none;
 }
 
 body,
@@ -14,7 +20,7 @@ html {
 
 .container {
 	position: relative;
-	width: 75%;
+	width: 1160px;
 	margin: 0 auto;
 	height: 100vh;
 }
@@ -22,41 +28,21 @@ html {
 .stripes-background {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1160px;
+
     height: 100vh;
     display: flex;
-    gap: 10px;
-    /* justify-content: space-between; */
+    gap: 12px;
 }
 
 .stripe {
     background-color: #151515;
-    /* width: 100%; */
-    min-width: 85px;
-    width: calc((75vw / 12) - (10px));
+    width: calc((1160px / 12) - (10px));
     height: 100%;
-    margin-right: 0;
-    margin-left: 0;
 }
-/* .background-stripes {
-	width: 100%;
-	height: 100%;
-	display: flex;
-    gap: 15px;
-}
-
-.stripe {
-	height: 100%;
-	background-color: #151515;
-    flex:1;
-}
-
-.stripe:last-child {
-	margin-right: 0;
-} */
-
 
 .enter-wrapper {
     height: 600px;
@@ -74,7 +60,6 @@ html {
 }
 
 .enter-text {
-	font-family: "Nunito Sans", sans-serif;
 	color: white;
 	text-transform: uppercase;
 	font-size: 2.2rem;
@@ -141,13 +126,64 @@ html {
 }
 
 .games-wrapper {
-    z-index: 100;
+    width: 100%;
 }
 
-.block {
-    z-index: 100;
+.games {
+    display: flex;
+    justify-content: space-between;
 }
 
-img {
-    z-index: 10;
+.doubled-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.press-kit-btn-container, .itch-io-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 134px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+.press-kit-btn-container span, .itch-io-btn-container span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+}
+
+.press-kit-btn-container img, .itch-io-btn-container img {
+    margin-top: 2px;
+}
+
+.steam-btn-container {
+    width: 281px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin-right: -1px;
+    margin-left: -1px;
+}
+
+.steam-btn-container span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.steam-btn-container img {
+    margin-top: 4.1px;
+}
+
+.block img {
+    margin-bottom: 5px;
 }

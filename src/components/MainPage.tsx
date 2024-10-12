@@ -26,6 +26,9 @@ function Main() {
             <div className="games-wrapper">
                 <div className="games">
                     <GameBlock/>
+                    <GameBlock/>
+                    <GameBlock/>
+                    <GameBlock/>
                 </div>
             </div>
 		</div>

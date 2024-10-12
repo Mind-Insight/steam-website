@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-
 function Stripes() {
-    const stripesCount = 12; // Фиксированное количество полос
-    const stripeWidth = 100 / stripesCount; // Вычисляем ширину каждой полосы в процентах
+    const stripesCount = 12;
 
     return (
-        <div className="stripes-background">
+        <div className="stripes-background" style={{ width: '1160px', overflow: 'hidden' }}>
             {Array.from({ length: stripesCount }, (_, index) => (
-                <div key={index} className="stripe" style={{ width: <code>${stripeWidth}%</code> }} />
+                <div
+                    key={index}
+                    className="stripe"
+                />
             ))}
         </div>
     );
