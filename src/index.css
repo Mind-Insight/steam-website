@@ -111,9 +111,9 @@ html {
 }
 
 .container {
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-    animation-delay: 0.3s;
+	opacity: 0;
+	animation: fadeIn 1.5s ease forwards;
+	animation-delay: 0.3s;
 }
 
 .enter-text:hover {
@@ -133,11 +133,11 @@ html {
 }
 
 .img-cont {
-    position: relative;
-    z-index: 3;
-    margin-bottom: 30px;
-    margin-top: 70px;
-    cursor: pointer;
+	position: relative;
+	z-index: 3;
+	margin-bottom: 30px;
+	margin-top: 70px;
+	cursor: pointer;
 }
 
 .logo {
@@ -155,7 +155,6 @@ html {
     transform: scale(1.05);
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
 } */
-
 
 @media (max-width: 768px) {
 	.enter-text {
@@ -253,7 +252,7 @@ html {
 
 .games {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 15px;
 }
@@ -304,18 +303,32 @@ html {
 .steam-btn-container span {
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 15px;
-	margin-top: 7px;
 }
 
-.steam-btn-container img {
-	margin-bottom: 10.1px;
+.game-img {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    width: 278px;
+    height: 374px;
+    border: 0.5px solid rgba(255, 255, 255, 0.04);
+    border-radius: 7px;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
 }
 
-.block img {
-	margin-bottom: 5px;
-	margin-top: 15px;
-	width: 278px;
-	height: 374px;
+.img-block {
+    transition: transform 0.3s ease;
+}
+
+.img-block:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
 }
 
 .scroll-button-right {
@@ -353,7 +366,7 @@ html {
 	.steam-btn-container span {
 		color: rgba(255, 255, 255, 0.6);
 		font-size: 12px;
-		margin-top: 7px;
+		/* margin-top: 7px; */
 	}
 	.scroll-button-right {
 		position: absolute;
@@ -377,7 +390,7 @@ html {
 		width: 240px;
 	}
 
-	.block img {
+	.game-img {
 		width: 225px;
 		height: 300px;
 		margin-bottom: 0px;
@@ -598,7 +611,7 @@ a {
 
 	.email-field {
 		width: 95%;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -782,4 +795,61 @@ a {
 	);
 	opacity: 0.2;
 	filter: blur(98.1px);
+}
+
+
+
+.privacy-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    height: auto;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.privacy-text {
+    font-size: 20px;
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.privacy-text a {
+    color: #ff4081;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.privacy-text a:hover {
+    color: #ff80ab;
+    text-decoration: underline;
+}
+
+b {
+    line-height: 30px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+@media (max-width: 1200px) {
+    .privacy-text {
+        font-size: 16px;
+    }
+}
+
+.success {
+    background-color: green;
+    color: white;
+}
+
+.privacy-container {
+	opacity: 0;
+	animation: fadeIn 1.5s ease forwards;
+	animation-delay: 0.3s;
 }

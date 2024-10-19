@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import GameBlock from "./GameBlock";
 import arrow from "../assets/arrow.svg";
 
 export const GamesList = () => {
-	const scrollRef = React.useRef(null);
-	const [showButton, setShowButton] = useState(false);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
-	const scrollRight = () => {
-		console.log(1);
-		if (scrollRef.current) {
-			scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-		}
-	};
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
+	const [showButton, setShowButton] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -35,13 +34,9 @@ export const GamesList = () => {
 		<div className="games-wrapper">
 			<div className="games" ref={scrollRef}>
 				<GameBlock />
-				<GameBlock />
-				<GameBlock />
-				<GameBlock />
-				<GameBlock />
-				<GameBlock />
-				<GameBlock />
-				<GameBlock />
+				{/* <GameBlock /> */}
+				{/* <GameBlock /> */}
+                {/* <GameBlock /> */}
 			</div>
 			{showButton && (
 				<button

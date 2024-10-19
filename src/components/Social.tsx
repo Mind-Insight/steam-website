@@ -9,7 +9,7 @@ function SocialLinks() {
 	return (
 		<div className="links-row">
 			<a
-				href="https://discord.com"
+				href="https://discord.gg/95J7RcpCFG"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -18,7 +18,7 @@ function SocialLinks() {
 				</div>
 			</a>
 			<a
-				href="https://twitter.com"
+				href="https://x.com/kreidpix"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -27,7 +27,7 @@ function SocialLinks() {
 				</div>
 			</a>
 			<a
-				href="https://youtube.com"
+				href="https://www.youtube.com/@kreidpix"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -36,7 +36,7 @@ function SocialLinks() {
 				</div>
 			</a>
 			<a
-				href="https://reddit.com"
+				href="https://www.reddit.com/user/kreidpix"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -45,7 +45,7 @@ function SocialLinks() {
 				</div>
 			</a>
 			<a
-				href="https://instagram.com"
+				href="https://www.instagram.com/kreidpix"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -54,7 +54,7 @@ function SocialLinks() {
 				</div>
 			</a>
 			<a
-				href="https://tiktok.com"
+				href="https://www.tiktok.com/@kreidpix"
 				target="_blank"
 				rel="noopener noreferrer"
 			>

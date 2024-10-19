@@ -1,10 +1,48 @@
+import { useState } from "react";
 import socialArrow from "../assets/social-arrow.svg";
-import companyEmailArrow from "../assets/company-email-arrow.svg";
 import Patreon from "../assets/patreon.svg";
 import Boosty from "../assets/boosty.svg";
-import smallArrow from "../assets/small_arrow.svg"
+import smallArrow from "../assets/small_arrow.svg";
 
 function News() {
+	const [email, setEmail] = useState("");
+	const [loading, _] = useState(false);
+	const [success, setSuccess] = useState(false);
+	// const [error, setError] = useState(null);
+	const handleSubscribe = async () => {
+		if (!email) {
+			// setError("Please enter your email address");
+			return;
+		}
+		// setError("");
+
+		try {
+			const res = await fetch("http://localhost:8000/index.php", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					email: email,
+					list_id: "588659",
+				}),
+			});
+
+			if (!res.ok) {
+				throw new Error("Network response was not ok");
+			}
+
+			// const data = await res.json();
+			// setResponse(data);
+			setSuccess(true);
+			setTimeout(() => {
+				setSuccess(false);
+			}, 1200);
+		} catch (error) {
+			console.error("Subscription failed:");
+		}
+	};
+
 	return (
 		<>
 			<div className="news">
@@ -14,13 +52,20 @@ function News() {
 				</div>
 				<div className="email-field">
 					<input
-						type="text"
+						type="email"
 						placeholder="YOUR EMAIL"
 						className="email-input"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
 					/>
-					<button className="email-btn">SUBSCRIBE</button>
+					<button
+						className={success ? "email-btn success" : "email-btn"}
+						onClick={handleSubscribe}
+						disabled={loading}
+					>
+						{success ? "SUCCESS" : "SUBSCRIBE"}
+					</button>
 				</div>
-
 				<div className="doubled-sub">
 					<div className="patreon-btn">
 						<div className="patreon-img-container">
@@ -29,9 +74,9 @@ function News() {
 						<div className="doubled-patreon-container">
 							<div className="patreon-text">
 								<span>SUPPORT US</span>
-								<br /> ON PATREON
+								ON PATREON
 							</div>
-							<a href="" className="patreon-link">
+							<a href="https://www.patreon.com/kreidpix" className="patreon-link">
 								<img src={socialArrow} alt="" />
 							</a>
 						</div>
@@ -43,9 +88,9 @@ function News() {
 						<div className="doubled-boosty-container">
 							<div className="boosty-text">
 								<span>SUPPORT US</span>
-								<br /> ON BOOSTY
+								ON BOOSTY
 							</div>
-							<a href="" className="boosty-link">
+							<a href="https://boosty.to/kreidpix" className="boosty-link">
 								<img src={socialArrow} alt="" />
 							</a>
 						</div>
@@ -54,9 +99,9 @@ function News() {
 
 				<div className="company-email">
 					<span>KREIDPIX@GMAIL.COM</span>
-                    <div className="company-email-img">
-                        <img src={smallArrow} alt="" />
-                    </div>
+					<div className="company-email-img">
+						<img src={smallArrow} alt="" />
+					</div>
 				</div>
 			</div>
 		</>
