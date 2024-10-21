@@ -1,11 +1,12 @@
 import Stripes from "./Stripes";
+import back from "../assets/back.png"
 
 function PrivacyPolicy() {
 	return (
 		<div className="privacy-container">
-			<Stripes></Stripes>
+			{/* <Stripes></Stripes> */}
 			<div className="privacy-text">
-				17.10.2024 <br /> <br />
+				<b>17.10.2024</b> <br /> <br />
 				<b>Introduction</b> <br />
 				Welcome to KREIDPIX. We are dedicated to safeguarding your
 				privacy and ensuring that your personal information is managed
@@ -47,7 +48,7 @@ function PrivacyPolicy() {
 				the personal data we hold about you, the right to request
 				correction of any inaccurate data, and the right to request
 				deletion of your personal data. To exercise any of these rights,
-				please contact us at <a href="">kreidpix@gmail.com.</a>. <br /><br />
+				please contact us at <a href="">kreidpix@gmail.com</a>. <br /><br />
 
 				<b>Privacy Policy Changes</b> <br />
 				We may update this Privacy Policy periodically. Any changes will
@@ -57,7 +58,7 @@ function PrivacyPolicy() {
 
 				<b>Contact Us</b> <br />
 				If you have any questions about this Privacy Policy, please
-				reach out to us at <a href="">kreidpix@gmail.com.</a>
+				reach out to us at <a href="">kreidpix@gmail.com</a>.
 			</div>
 		</div>
 	);

@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer">
             <div className="privacy-policy">
                 <a href="http://localhost:5173/privacy_policy/">
-                    <span style={{color: "white"}}>PRIVACY POLICY</span><br />
+                    <span style={{color: "rgba(255, 255, 255, 0.6)"}}>PRIVACY POLICY</span><br />
                 </a>
                 KREIDPIX@GMAIL.COM
             </div>

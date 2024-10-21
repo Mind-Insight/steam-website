@@ -10,7 +10,7 @@ function Main() {
 	return (
 		<>
 			<div className="container" id="start">
-				<Stripes />
+				{/* <Stripes /> */}
 				<div className="enter-wrapper">
 					<div className="enter">
 						<div className="back-blur"></div>
@@ -22,7 +22,7 @@ function Main() {
 								We
 							</span>{" "}
 							<span style={{ color: "fff", opacity: 0.6 }}>
-								create
+								draw
 							</span>{" "}
 							entertainment with pixels
 						</h1>

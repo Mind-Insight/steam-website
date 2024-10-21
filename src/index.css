@@ -145,6 +145,7 @@ html {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	z-index: 3;
+    transform: scale(1.1);
 }
 
 /* .img-cont {
@@ -157,6 +158,9 @@ html {
 } */
 
 @media (max-width: 768px) {
+    .logo {
+        transform: scale(1.0);
+    }
 	.enter-text {
 		font-size: 1.8rem;
 		letter-spacing: 5px;
@@ -355,11 +359,13 @@ html {
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		margin-left: 29px;
+        justify-content: flex-start;
 	}
 }
 @media (max-width: 800px) {
 	.games {
 		gap: 15px;
+        justify-content: flex-start;
 	}
 	.press-kit-btn-container span,
 	.itch-io-btn-container span,
@@ -701,7 +707,7 @@ a {
 
 .privacy-policy {
 	color: rgba(255, 255, 255, 0.4);
-	text-align: center;
+	/* text-align: center; */
 }
 
 @media (max-width: 768px) {
@@ -821,20 +827,21 @@ a {
 }
 
 .privacy-text a {
-    color: #ff4081;
+    /* font-family: "Nunito Sans", sans-serif; */
+    color: #42AAFF;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .privacy-text a:hover {
-    color: #ff80ab;
+    color: lightblue;
     text-decoration: underline;
 }
 
 b {
     line-height: 30px;
     font-weight: bold;
-    color: #ffcc00;
+    /* color: #ffcc00; */
 }
 
 @media (max-width: 1200px) {
@@ -844,7 +851,7 @@ b {
 }
 
 .success {
-    background-color: green;
+    background-color: #6BA21F;
     color: white;
 }
 
@@ -853,3 +860,4 @@ b {
 	animation: fadeIn 1.5s ease forwards;
 	animation-delay: 0.3s;
 }
+

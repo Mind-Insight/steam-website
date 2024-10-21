@@ -6,15 +6,16 @@ import smallArrow from "../assets/small_arrow.svg";
 
 function News() {
 	const [email, setEmail] = useState("");
-	const [loading, _] = useState(false);
+	const [loading, setLoading] = useState(false);
 	const [success, setSuccess] = useState(false);
-	// const [error, setError] = useState(null);
+
 	const handleSubscribe = async () => {
 		if (!email) {
 			// setError("Please enter your email address");
 			return;
 		}
-		// setError("");
+
+		setLoading(true);
 
 		try {
 			const res = await fetch("http://localhost:8000/index.php", {
@@ -24,7 +25,7 @@ function News() {
 				},
 				body: JSON.stringify({
 					email: email,
-					list_id: "588659",
+					list_id: "589589",
 				}),
 			});
 
@@ -32,17 +33,17 @@ function News() {
 				throw new Error("Network response was not ok");
 			}
 
-			// const data = await res.json();
-			// setResponse(data);
 			setSuccess(true);
 			setTimeout(() => {
 				setSuccess(false);
-			}, 1200);
+				setEmail("");
+			}, 1000);
 		} catch (error) {
-			console.error("Subscription failed:");
+			console.error("Subscription failed:", error);
+		} finally {
+			setLoading(false);
 		}
 	};
-
 	return (
 		<>
 			<div className="news">
@@ -74,9 +75,13 @@ function News() {
 						<div className="doubled-patreon-container">
 							<div className="patreon-text">
 								<span>SUPPORT US</span>
+								<br />
 								ON PATREON
 							</div>
-							<a href="https://www.patreon.com/kreidpix" className="patreon-link">
+							<a
+								href="https://www.patreon.com/kreidpix"
+								className="patreon-link"
+							>
 								<img src={socialArrow} alt="" />
 							</a>
 						</div>
@@ -88,9 +93,13 @@ function News() {
 						<div className="doubled-boosty-container">
 							<div className="boosty-text">
 								<span>SUPPORT US</span>
+								<br />
 								ON BOOSTY
 							</div>
-							<a href="https://boosty.to/kreidpix" className="boosty-link">
+							<a
+								href="https://boosty.to/kreidpix"
+								className="boosty-link"
+							>
 								<img src={socialArrow} alt="" />
 							</a>
 						</div>

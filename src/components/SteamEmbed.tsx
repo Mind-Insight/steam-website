@@ -2,8 +2,9 @@ function SteamEmbed() {
 	return (
 		<div className="steamEmbed">
             <div className="text">
-                WISH <span>LIST</span>
+                WISH<span>LIST</span>
             </div>
+
 			<iframe
 				src="https://store.steampowered.com/widget/500/?utm_source=homepage&utm_campaign=mycampaign"
 				width="100%"
