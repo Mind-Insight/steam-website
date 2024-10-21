@@ -3,6 +3,7 @@ import socialArrow from "../assets/social-arrow.svg";
 import Patreon from "../assets/patreon.svg";
 import Boosty from "../assets/boosty.svg";
 import smallArrow from "../assets/small_arrow.svg";
+import newsBlur from "../assets/news_blur.png"
 
 function News() {
 	const [email, setEmail] = useState("");
@@ -52,8 +53,10 @@ function News() {
 		<>
 			<div className="news">
 				<div className="news-text">
-					<span>GET THE </span>
+                    {/* <img src={newsBlur} alt="" /> */}
+					<span>GET THE{" "}
 					<span className="special">NEWS</span>
+                    </span>
 				</div>
 				<div className="email-field">
 					<input

@@ -10,7 +10,7 @@ function Footer() {
     return (
         <div className="footer">
             <div className="privacy-policy">
-                <a href="http://localhost:5173/privacy_policy/">
+                <a href="http://185.247.185.44/privacy_policy/">
                     <span style={{color: "rgba(255, 255, 255, 0.6)"}}>PRIVACY POLICY</span><br />
                 </a>
                 KREIDPIX@GMAIL.COM
