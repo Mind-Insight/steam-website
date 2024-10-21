@@ -3,7 +3,6 @@ import socialArrow from "../assets/social-arrow.svg";
 import Patreon from "../assets/patreon.svg";
 import Boosty from "../assets/boosty.svg";
 import smallArrow from "../assets/small_arrow.svg";
-import newsBlur from "../assets/news_blur.png"
 
 function News() {
 	const [email, setEmail] = useState("");
@@ -19,7 +18,7 @@ function News() {
 		setLoading(true);
 
 		try {
-			const res = await fetch("http://localhost:8000/index.php", {
+			const res = await fetch("http://185.247.185.44/index.php", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

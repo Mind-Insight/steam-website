@@ -46,6 +46,7 @@ html {
 */
 
 .container {
+    /* border: 1px solid white; */
 	position: relative;
 	width: 100%;
 	max-width: 1160px;
@@ -136,8 +137,10 @@ html {
     cursor: pointer;
 	margin-bottom: 50px;
 	text-align: center;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
-                 0 0 20px rgba(255, 255, 255, 0.4);
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), */
+                 /* 0 0 20px rgba(255, 255, 255, 0.4);
+                 */
+    text-shadow: 0px 4px 68px rgba(255, 255, 255, 1);
     transition: text-shadow 0.3s ease;
 }
 .enter-text:hover {
@@ -363,7 +366,7 @@ html {
 	.games {
 		flex-wrap: nowrap;
 		overflow-x: auto;
-		margin-left: 29px;
+		/* margin-left: 29px; */
         justify-content: center;
 	}
 }
@@ -397,6 +400,7 @@ html {
 		margin-bottom: 70px;
 	}
 	.block {
+        /* border: 1px solid white; */
 		height: 430px;
 		width: 240px;
 	}
@@ -754,6 +758,7 @@ a {
 }
 
 .text {
+    border: 1px solid white;
 	margin-bottom: 31px;
 	font-weight: 600;
 	font-size: 52px;
