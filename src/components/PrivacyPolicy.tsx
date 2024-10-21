@@ -1,6 +1,3 @@
-import Stripes from "./Stripes";
-import back from "../assets/back.png"
-
 function PrivacyPolicy() {
 	return (
 		<div className="privacy-container">

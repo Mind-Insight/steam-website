@@ -1,4 +1,3 @@
-import Stripes from "./Stripes";
 import SocialLinks from "./Social";
 import News from "./News";
 import logo from "../assets/logo.svg";

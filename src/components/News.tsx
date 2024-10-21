@@ -44,6 +44,10 @@ function News() {
 			setLoading(false);
 		}
 	};
+
+    const handleEmailClick = () => {
+        window.location.href = "mailto:kreidpix@gmail.com";
+    }
 	return (
 		<>
 			<div className="news">
@@ -107,8 +111,10 @@ function News() {
 				</div>
 
 				<div className="company-email">
-					<span>KREIDPIX@GMAIL.COM</span>
-					<div className="company-email-img">
+                    <div className="company-email-span" onClick={handleEmailClick} style={{cursor: "pointer"}}>
+					    <span>KREIDPIX@GMAIL.COM</span>
+                    </div>
+					<div className="company-email-img" onClick={handleEmailClick}>
 						<img src={smallArrow} alt="" />
 					</div>
 				</div>
